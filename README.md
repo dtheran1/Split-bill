@@ -1,5 +1,11 @@
 # split-bill
 
+![image](https://user-images.githubusercontent.com/83596975/228628693-1c27e451-891c-4335-aad5-ff3d49379849.png)
+
+![image](https://user-images.githubusercontent.com/83596975/228628709-4fd4ff72-56d4-4a24-acd8-9239b90f0a71.png)
+
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
