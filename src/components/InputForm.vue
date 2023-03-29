@@ -38,4 +38,32 @@ const handleSubmit = () => {
   </form>
 </template>
 
-<style scoped></style>
+<style scoped>
+form {
+  width: 400px;
+  background-color: rgb(23, 129, 78);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+}</style>

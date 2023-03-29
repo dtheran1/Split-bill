@@ -1,5 +1,7 @@
 <script setup>
-  import { store, getGrandTotal } from '../store/store'
+import { store, getGrandTotal } from '../store/store'
+import Label from './Label.vue';
+import Person from './Person.vue';
 
 </script>
 
@@ -10,16 +12,57 @@
     <div class="header">
       <div>
         <div>
-          {{ getGrandTotal() }}
+          <Label title="Total + Tip: " :value="getGrandTotal()" />
         </div>
       </div>
       <div>
         <div>
-          {{ store.params.remaining }}
+          <Label title="Remaining: " :value="store.params.remaining" />
         </div>
       </div>
+    </div>
+
+    <div class="people-container">
+      <Person v-for="person in store.people" :key="person.id" :id="person.id" :number-of-person="person.numberOfPerson"
+        :total-per-person="person.totalPerPerson" :paid="person.paid" />
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.no-items {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.people-view {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.people-container {
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.header{
+  color: wheat;
+  font-weight: bolder;
+  padding: 20px 0;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-direction: column;
+}
+</style>
